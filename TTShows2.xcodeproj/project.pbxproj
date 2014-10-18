@@ -14,6 +14,8 @@
 		7E940A6819F224790098C4E9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E940A6719F224790098C4E9 /* Images.xcassets */; };
 		7E940A6B19F224790098C4E9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E940A6919F224790098C4E9 /* LaunchScreen.xib */; };
 		7E940A7719F224790098C4E9 /* TTShows2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E940A7619F224790098C4E9 /* TTShows2Tests.m */; };
+		7E940A8319F241050098C4E9 /* TTShow2TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E940A8219F241050098C4E9 /* TTShow2TableViewController.m */; };
+		F490512BFB2A1C26116871A5 /* libPods-TTShows2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B11DDAA9988750DD953BA3 /* libPods-TTShows2.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,11 @@
 		7E940A7019F224790098C4E9 /* TTShows2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TTShows2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E940A7519F224790098C4E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E940A7619F224790098C4E9 /* TTShows2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTShows2Tests.m; sourceTree = "<group>"; };
+		7E940A8119F241050098C4E9 /* TTShow2TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTShow2TableViewController.h; sourceTree = "<group>"; };
+		7E940A8219F241050098C4E9 /* TTShow2TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTShow2TableViewController.m; sourceTree = "<group>"; };
+		91819C9D25483DE7070537E2 /* Pods-TTShows2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTShows2.release.xcconfig"; path = "Pods/Target Support Files/Pods-TTShows2/Pods-TTShows2.release.xcconfig"; sourceTree = "<group>"; };
+		A8B11DDAA9988750DD953BA3 /* libPods-TTShows2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TTShows2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB3766331687A375272BD187 /* Pods-TTShows2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTShows2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TTShows2/Pods-TTShows2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F490512BFB2A1C26116871A5 /* libPods-TTShows2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +74,8 @@
 				7E940A5919F224790098C4E9 /* TTShows2 */,
 				7E940A7319F224790098C4E9 /* TTShows2Tests */,
 				7E940A5819F224790098C4E9 /* Products */,
+				9B4305E2819FB431CCA51F45 /* Pods */,
+				968BFA4CF399F9CF5FE83EA8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +91,7 @@
 		7E940A5919F224790098C4E9 /* TTShows2 */ = {
 			isa = PBXGroup;
 			children = (
+				7E940A8019F240D20098C4E9 /* Model */,
 				7E940A5E19F224790098C4E9 /* AppDelegate.h */,
 				7E940A5F19F224790098C4E9 /* AppDelegate.m */,
 				7E940A6119F224790098C4E9 /* ViewController.h */,
@@ -119,6 +130,32 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7E940A8019F240D20098C4E9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7E940A8119F241050098C4E9 /* TTShow2TableViewController.h */,
+				7E940A8219F241050098C4E9 /* TTShow2TableViewController.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		968BFA4CF399F9CF5FE83EA8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8B11DDAA9988750DD953BA3 /* libPods-TTShows2.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9B4305E2819FB431CCA51F45 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DB3766331687A375272BD187 /* Pods-TTShows2.debug.xcconfig */,
+				91819C9D25483DE7070537E2 /* Pods-TTShows2.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +163,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E940A7A19F224790098C4E9 /* Build configuration list for PBXNativeTarget "TTShows2" */;
 			buildPhases = (
+				868916D3D09101C745BECF53 /* Check Pods Manifest.lock */,
 				7E940A5319F224790098C4E9 /* Sources */,
 				7E940A5419F224790098C4E9 /* Frameworks */,
 				7E940A5519F224790098C4E9 /* Resources */,
+				D1AB3ECB776518EC2CDD058E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,6 +207,7 @@
 				TargetAttributes = {
 					7E940A5619F224790098C4E9 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 6S847MQDY3;
 					};
 					7E940A6F19F224790098C4E9 = {
 						CreatedOnToolsVersion = 6.0;
@@ -214,12 +254,46 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		868916D3D09101C745BECF53 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D1AB3ECB776518EC2CDD058E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TTShows2/Pods-TTShows2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7E940A5319F224790098C4E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7E940A6319F224790098C4E9 /* ViewController.m in Sources */,
+				7E940A8319F241050098C4E9 /* TTShow2TableViewController.m in Sources */,
 				7E940A6019F224790098C4E9 /* AppDelegate.m in Sources */,
 				7E940A5D19F224790098C4E9 /* main.m in Sources */,
 			);
@@ -280,7 +354,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mohd Faizal Sukaimi (HP4X84FA8Q)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mohd Faizal Sukaimi (HP4X84FA8Q)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -321,7 +396,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mohd Faizal Sukaimi (HP4X84FA8Q)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mohd Faizal Sukaimi (HP4X84FA8Q)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -341,21 +417,31 @@
 		};
 		7E940A7B19F224790098C4E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB3766331687A375272BD187 /* Pods-TTShows2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TTShows2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		7E940A7C19F224790098C4E9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91819C9D25483DE7070537E2 /* Pods-TTShows2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TTShows2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -412,6 +498,7 @@
 				7E940A7C19F224790098C4E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7E940A7D19F224790098C4E9 /* Build configuration list for PBXNativeTarget "TTShows2Tests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +507,7 @@
 				7E940A7F19F224790098C4E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
